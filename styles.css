@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+body {
+    /* position: relative; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2f363e;
+    min-height: 100vh;
+    color: #fff;
+}
+section {
+    display: flex;
+    justify-content: center;
+}
+section .text h1 {
+    position: absolute;
+    top: 20px;
+    font-size: 6em;
+    text-transform: uppercase;
+    -webkit-text-stroke: 2px grey;
+    color: transparent;
+    transform: translateX(-10%);
+}
+section .text h2 {
+    position: absolute;
+    top: 50px;
+    font-size: 7em;
+    transform: translateX(60%);
+}
+#time {
+    display: flex;
+    gap: 30px;
+}
+#time .circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#time .circle svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+#time .circle svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke: #282828;
+    stroke-width: 8;
+    transform: translate(5px, 5px);
+}
+#time .circle svg circle:nth-child(2) {
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+}
+#time div {
+    position: absolute;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+#time div span {
+   position: absolute; 
+   transform: translateX(-50%) translateY(-50%);
+   margin-top: 0.3em;
+   text-transform: uppercase;
+   letter-spacing: 0.1em;
+   font-weight: 400;
+   font-size: 0.45em;
+}
+#time .dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+.dots::before {
+    content: " ";
+    position: absolute;
+    top: -3px;
+    width: 15px;
+    height: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
